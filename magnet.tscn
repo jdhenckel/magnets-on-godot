@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dsujg6uykwg4y"]
+
+[ext_resource type="Script" uid="uid://b8vqg60n4urb5" path="res://magnet.gd" id="1_wu1kv"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ck60w"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dc7t5"]
+size = Vector2(144, 40)
+
+[node name="Magnet" type="RigidBody2D" unique_id=216877679]
+physics_material_override = SubResource("PhysicsMaterial_ck60w")
+script = ExtResource("1_wu1kv")
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=608407730]
+shape = SubResource("RectangleShape2D_dc7t5")
+
+[node name="NorthEnd" type="ColorRect" parent="." unique_id=2132745551]
+offset_left = 32.0
+offset_top = -20.0
+offset_right = 72.0
+offset_bottom = 20.0
+color = Color(0.5072435, 1.2694486e-06, 1.92523e-07, 1)
+
+[node name="MiddleBit" type="ColorRect" parent="." unique_id=1912536291]
+offset_left = -32.0
+offset_top = -20.0
+offset_right = 32.0
+offset_bottom = 20.0
+color = Color(0.49747366, 0.49747366, 0.49747366, 1)
+
+[node name="SouthEnd" type="ColorRect" parent="." unique_id=277629867]
+offset_left = -72.0
+offset_top = -20.0
+offset_right = -32.0
+offset_bottom = 20.0
+color = Color(0.00017745807, 0, 0.55968887, 1)
